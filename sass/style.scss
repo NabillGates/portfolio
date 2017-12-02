@@ -1,0 +1,214 @@
+$yellow : #ffc800;
+
+@mixin transform($type) {
+	-webkit-transform: $type;
+	   -moz-transform: $type;
+	    -ms-transform: $type;
+	     -o-transform: $type;
+	        transform: $type;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+body {
+	background-color: $yellow;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	min-height: 100%;
+
+	p, h2, h3 {
+		font-family: "helvetica neue", arial;
+		margin: auto;
+		line-height: 120%;
+	}
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+
+	h1.name {
+		font-size: 1.6em;
+		margin: auto;
+		letter-spacing: 5px;
+		font-weight: normal;
+	}
+	h2.subtitle {
+		font-size: 3vw;
+	}
+}
+
+header {
+	background: $yellow;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    left: 0;
+	right: 0;
+
+	.container {
+		position: relative;
+		max-width: 1280px;
+		margin: auto;
+	}
+
+	.logo {
+		float: left;
+		width: 100%;
+		max-width: 100px;
+		padding: 10px;
+	}
+	.navigation {
+		float: right;
+		padding: 38px;
+
+		ul.menu {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				list-style: none;
+				display: inline-block;
+				margin: 0 30px;
+			}
+		}
+	}
+	a {
+		font-family: 'Alfa Slab One', cursive;
+		font-weight: normal;
+	}
+}
+
+section {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	@media (max-height: 700px) {
+		min-height: 600px;
+	}
+
+	h2.category {
+		color: #222;
+		font-size: 18vh;
+		position: absolute;
+		top: 140%;
+		left: -40%;
+		transform-origin: top left;
+		@include transform(translateZ(-1px) rotate(-90deg) scale(2));
+		transform-style: preserve-3d;
+		line-height: 90%;
+		font-family: 'Alfa Slab One', cursive;
+		font-weight: normal;
+	}
+
+	&.odd {
+		background-color: #FFF;
+
+		h2 {
+			color: $yellow;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&#home {
+		background-color: $yellow;
+
+		.textParallax {
+			font-size: 7vw;
+			font-weight: bold;
+			line-height: 100%;
+			position: absolute;
+
+			&.en, &.fr {
+				transform-style: preserve-3d;
+				transform-origin: top left;
+			}
+			&.fr {
+				font-family: 'Alfa Slab One', cursive;
+				font-weight: normal;
+				font-size:6vw;
+				font-weight: 400;
+				letter-spacing: 15px;
+				top: 50%;
+				left: -25%;
+				transform: translateZ(-1px) rotate(-90deg) scale(2) translate(-50%,-50%);
+			}
+			&.en {
+				font-weight: normal;
+				top: 50%;
+				left: -35%;
+				transform: translateZ(-2px) rotate(90deg) scale(5) translate(-50%, -50%);
+			}
+			&.zh {
+				top: 125%;
+				left: -30%;
+				transform: translateZ(-4px) scale(5) translate(-50%, -50%);
+			}
+		}
+		.content {
+			h1.name {
+				font-size: 1.6em;
+				margin: auto;
+				letter-spacing: 5px;
+				font-weight: normal;
+			}
+			h2.subtitle {
+				font-size: 3vw;
+				font-family: 'Alfa Slab One', cursive;
+				font-weight: normal;
+			}
+		}
+	}
+
+	&#about {
+		.content {
+			h2.title {
+				font-family: 'Alfa Slab One', cursive;
+				font-weight: normal;
+				color: #000;
+				font-size: 2vw;
+				margin-bottom: 5%;
+			}
+
+			p.paragraph {
+				line-height: 150%;
+				letter-spacing: 2px;
+			}
+		}
+
+		.skills {
+			.column {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+}
+
+.parallax {
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}

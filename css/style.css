@@ -1,0 +1,167 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+body {
+  background-color: #ffc800;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  min-height: 100%; }
+  body p, body h2, body h3 {
+    font-family: "helvetica neue", arial;
+    margin: auto;
+    line-height: 120%; }
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .content h1.name {
+    font-size: 1.6em;
+    margin: auto;
+    letter-spacing: 5px;
+    font-weight: normal; }
+  .content h2.subtitle {
+    font-size: 3vw; }
+
+header {
+  background: #ffc800;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  left: 0;
+  right: 0; }
+  header .container {
+    position: relative;
+    max-width: 1280px;
+    margin: auto; }
+  header .logo {
+    float: left;
+    width: 100%;
+    max-width: 100px;
+    padding: 10px; }
+  header .navigation {
+    float: right;
+    padding: 38px; }
+    header .navigation ul.menu {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      header .navigation ul.menu li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 30px; }
+  header a {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal; }
+
+section {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media (max-height: 700px) {
+    section {
+      min-height: 600px; } }
+  section h2.category {
+    color: #222;
+    font-size: 18vh;
+    position: absolute;
+    top: 140%;
+    left: -40%;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: translateZ(-1px) rotate(-90deg) scale(2);
+    -moz-transform: translateZ(-1px) rotate(-90deg) scale(2);
+    -ms-transform: translateZ(-1px) rotate(-90deg) scale(2);
+    -o-transform: translateZ(-1px) rotate(-90deg) scale(2);
+    transform: translateZ(-1px) rotate(-90deg) scale(2);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    line-height: 90%;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal; }
+  section.odd {
+    background-color: #FFF; }
+    section.odd h2 {
+      color: #ffc800; }
+  section img {
+    width: 100%; }
+  section#home {
+    background-color: #ffc800; }
+    section#home .textParallax {
+      font-size: 7vw;
+      font-weight: bold;
+      line-height: 100%;
+      position: absolute; }
+      section#home .textParallax.en, section#home .textParallax.fr {
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+        transform-origin: top left; }
+      section#home .textParallax.fr {
+        font-family: 'Alfa Slab One', cursive;
+        font-weight: normal;
+        font-size: 6vw;
+        font-weight: 400;
+        letter-spacing: 15px;
+        top: 50%;
+        left: -25%;
+        -webkit-transform: translateZ(-1px) rotate(-90deg) scale(2) translate(-50%, -50%);
+        transform: translateZ(-1px) rotate(-90deg) scale(2) translate(-50%, -50%); }
+      section#home .textParallax.en {
+        font-weight: normal;
+        top: 50%;
+        left: -35%;
+        -webkit-transform: translateZ(-2px) rotate(90deg) scale(5) translate(-50%, -50%);
+        transform: translateZ(-2px) rotate(90deg) scale(5) translate(-50%, -50%); }
+      section#home .textParallax.zh {
+        top: 125%;
+        left: -30%;
+        -webkit-transform: translateZ(-4px) scale(5) translate(-50%, -50%);
+        transform: translateZ(-4px) scale(5) translate(-50%, -50%); }
+    section#home .content h1.name {
+      font-size: 1.6em;
+      margin: auto;
+      letter-spacing: 5px;
+      font-weight: normal; }
+    section#home .content h2.subtitle {
+      font-size: 3vw;
+      font-family: 'Alfa Slab One', cursive;
+      font-weight: normal; }
+  section#about .content h2.title {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal;
+    color: #000;
+    font-size: 2vw;
+    margin-bottom: 5%; }
+  section#about .content p.paragraph {
+    line-height: 150%;
+    letter-spacing: 2px; }
+  section#about .skills .column {
+    width: 50%;
+    float: left; }
+
+.parallax {
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; }
